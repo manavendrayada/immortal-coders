@@ -1,0 +1,153 @@
+:root {
+    --box-shadow: 0 1px 3px rgba(14, 12, 12, 0.671),
+      0 1px 2px rgba(0, 0, 0, 0.546);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0e0d0d;
+    background-image: url(https://cdn.dribbble.com/users/722246/screenshots/2262276/priory.gif);
+    display: flex;
+    flex-direction: column;
+    color: #fffafae8;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 10;
+    font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  .container {
+    margin: 30px auto;
+    width: 350px;
+  }
+  
+  h1 {
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  h3 {
+    border-bottom: 2px solid #f5f2f290;
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+  }
+  
+  h4 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .inc-exp-container {
+    background-color: #30303087;
+    box-shadow: var(--box--shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .inc-exp-container > div:first-of-type {
+    border-right: 1px solid #898080bc;
+  }
+  
+  .money {
+    font-size: 2;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
+  .money-plus {
+    color: #15dc68c5;
+  }
+  
+  .money-minus {
+    color: #ed250f;
+  }
+  
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    border: 2px solid #ea191992;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .btn {
+    cursor: pointer;
+    background-color: #826ced2c;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .btn:focus,
+  .delete-btn:focus {
+    outline: 0;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .list li {
+    background-color: #f5f1f159;
+    box-shadow: var(--box--shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+  
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+  
+  .delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .list li:hover .delete-btn {
+    opacity: 1;
+  }
